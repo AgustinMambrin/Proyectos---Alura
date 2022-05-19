@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylessheet" href="css/reset.css">
+    <link rel= "stylesheet" href="css/style.css">
+    <title>Encriptador de texto - Alura Latam</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    
+    <header>
+        <div class="conteiner">
+            <img class="logo" src="/imagenes/Vector.png" alt="logo alura latam">
+        </div>    
+    </header>
+    
+    <main>
+        <section class="rectangulo">  
+            <textarea id="area-texto" type="text" cols="40" rows="6" placeholder="Ingrese el texto aqui..."
+            oninput="this.value = this.value.replace(/[^a-z]/,'')"></textarea>
+            <div class="label">
+                <img class="exclamation-logo" src="imagenes/bi_exclamation-circle-fill.png">
+                <label for="area-texto">Solo letras minusculas y sin acentos.</label>
+            </div>
+            <div class="botones">
+                <button type="button" id="encriptar">Encriptar</button>
+                <button type="button" id="desencriptar">Desencriptar</button>
+            </div>
+        </section>
+        <section class="rectangle-1">
+            <div id="frame-5">
+                <img class="imagen-texto" src="/imagenes/Muñeco.png">
+                <h6>Ningún mensaje fue encontrado</h6>
+                <p>Ingresa el texto que desees encriptar o desencriptar.</p>
+            </div>
+            
+            <div id="textarea-boton">
+                <textarea id="mostrar-texto" cols="18" rows="8"></textarea>
+                <button type="button" id="copiar-texto" onclick="copiarTexto()">Copiar</button>
+            </div>    
+        </section>
+
+        
+    </main>
+    
+    <footer class="footer">
+        <h6>Redes Sociales</h6>
+        <div class="imagenes">
+            <a href="https://www.linkedin.com/in/agustin-mambrin-34831b20b?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BfDTV8GieTR2PHvU54L59qQ%3D%3D"><img src="imagenes/linkedin.png"></a>
+            <a href="https://www.facebook.com/agus.demdr"><img src="imagenes/fb.png"></a>
+            <a href="#"><img src="imagenes/github.png"></a>
+            <a href="https://www.discordapp.com/users/961424997782536192"><img src="imagenes/discord-logo.png"></a>
+        </div>
+        <p>Página creada por Agustin Mambrin | Encriptador de texto &#169; 2022.</p>
+    </footer>
+
+    <script src="js/encriptar.js"></script>
+    <script src="js/desencriptar.js"></script>
+    <script src="js/copiartexto.js"></script>
+</body>
+</html>
